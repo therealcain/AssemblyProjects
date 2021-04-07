@@ -1,4 +1,7 @@
 ; My first every x86 assembly program.
+; Compile like so:
+; $ nasm -f elf32 main.asm
+; $ gcc main.o -m32
 
 global main
 extern puts
@@ -19,7 +22,7 @@ main:
     push  msg
     call  puts
 
-    ; Clearingstack frame.
+    ; Clearing stack frame.
     mov   esp, ebp
     pop   ebp
     ret
