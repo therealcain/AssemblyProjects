@@ -1,3 +1,7 @@
+; Compile like so:
+; $ nasm -f elf32 better_main.asm
+; $ gcc better_main.o -m32
+
 global main
 extern puts
 
